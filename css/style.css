@@ -1,0 +1,68 @@
+#header {
+  background-image: url(../img/header.png);
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+}
+.container {
+  max-width: 120rem;
+  margin: 0;
+  padding: 0;
+}
+.letra {
+  font-family: "Lato", sans-serif;
+}
+.btn a {
+  font-size: 2rem;
+  text-decoration: none;
+  align-items: center;
+}
+.btn__color a {
+  color: #fe5f1e;
+}
+.flex__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 30vh;
+  align-items: center;
+  height: 50vh;
+  width: 100vw;
+}
+
+.Banner__H {
+  display: flex;
+}
+
+.img__personal {
+  border-radius: 50%;
+  height: 15rem;
+  width: 15rem;
+}
+.texto__presentacion {
+  font-size: 3rem;
+  color: #fff;
+  text-align: start;
+  margin: 2rem;
+}
+p > span {
+  font-weight: bold;
+}
+.nombre__color {
+  color: #fe5f1e;
+}
+.cv {
+  margin: 0 0 2rem 0;
+}
+.download {
+  padding: 0 0 0 2rem;
+}
+.flex__redes {
+  display: flex;
+}
+.redes {
+}
+
+.space__redes {
+  margin-bottom: 4rem;
+}
