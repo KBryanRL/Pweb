@@ -5,12 +5,27 @@
   width: 100vw;
 }
 .container {
-  max-width: 120rem;
-  margin: 0;
-  padding: 0;
+  max-width: 100rem;
+  margin: 0 auto;
+  padding: 0 auto;
+}
+.logo__size {
+  width: 5rem;
+  height: 5rem;
+}
+
+.img__space {
+  width: 100%;
+  text-align: center;
 }
 .letra {
   font-family: "Lato", sans-serif;
+  margin: 0;
+}
+.letra__blanca {
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 0;
 }
 .btn a {
   font-size: 2rem;
@@ -24,7 +39,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-top: 30vh;
+  padding-top: 20vh;
   align-items: center;
   height: 50vh;
   width: 100vw;
@@ -60,9 +75,72 @@ p > span {
 .flex__redes {
   display: flex;
 }
-.redes {
+a {
+  cursor: pointer;
+}
+/*proyectos*/
+.section__proyectos {
+  margin: 0;
+}
+.Grid__linea {
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: minmax(10rem, auto);
 }
 
-.space__redes {
-  margin-bottom: 4rem;
+.Caja {
+  width: 45vw;
+  height: 50vh;
+  margin: 0;
+}
+.Caja__vacia {
+  height: 3rem;
+}
+.Caja__Proyecto {
+  background-image: url(../img/proyectos/coffeto.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.space {
+  margin-top: 20rem;
+}
+.space-center {
+  margin-left: 40vw;
+}
+.caja__linea--tiempo {
+  text-align: center;
+  justify-content: center;
+  height: 50vh;
+  margin: 0;
+}
+
+.linea {
+  background-color: black;
+  width: 10px;
+  height: 80%;
+  margin: 0 0 0 50%;
+}
+
+/*footer*/
+.footer {
+  width: 100vw;
+  height: 20vh;
+}
+.footer__color {
+  background-color: #312f2f;
+}
+.flex__footer--column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flex__footer {
+  display: flex;
+  justify-content: space-between !important;
+  padding-top: 4rem;
 }
