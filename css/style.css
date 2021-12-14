@@ -4,6 +4,9 @@
   height: 100vh;
   width: 100vw;
 }
+body {
+  background-color: #1d1d1d;
+}
 .container {
   max-width: 100rem;
   margin: 0 auto;
@@ -27,6 +30,46 @@
   font-size: 1.5rem;
   margin: 0;
 }
+.btn__redes {
+  position: relative;
+  width: 5rem;
+  height: 1rem;
+  margin-bottom: 2rem;
+}
+
+.btn__redes::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  left: 0;
+  bottom: 0;
+  background-color: #fe5f1e;
+}
+.btn__redes--footers {
+  position: relative;
+  width: 5rem;
+  height: 1rem;
+  margin-bottom: 2rem;
+}
+.btn__redes--footers::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0.1rem;
+  top: 40px;
+  left: 0;
+  bottom: 0;
+  background-color: #fe5f1e;
+}
+.btn__redes--left::after {
+  transform: scale(0, 1);
+  transform-origin: 0% 100%;
+  transition: transform 0.3s ease;
+}
+.btn__redes--left:hover::after {
+  transform: scale(1, 1);
+}
 .btn a {
   font-size: 2rem;
   text-decoration: none;
@@ -35,30 +78,52 @@
 .btn__color a {
   color: #fe5f1e;
 }
-.flex__header {
+.flex__preentacion--redes {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+.content__start {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-top: 20vh;
-  align-items: center;
-  height: 50vh;
-  width: 100vw;
+  padding-top: 15vh;
 }
 
-.Banner__H {
+.flex__texto--header {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3rem;
+}
+.flex__logoB--texto {
   display: flex;
 }
-
 .img__personal {
   border-radius: 50%;
   height: 15rem;
   width: 15rem;
 }
+.flex__letras {
+  display: inline-block;
+}
+
 .texto__presentacion {
-  font-size: 3rem;
+  font-size: 5rem;
   color: #fff;
   text-align: start;
-  margin: 2rem;
+  margin: 1rem 1rem 1rem 0;
+  justify-content: start;
+}
+
+.letra__span {
+  font-size: 2rem;
+}
+.spacio__letras {
+  padding-right: 1rem;
+}
+.logo__sizeB {
+  width: 6rem;
+  height: 6rem;
 }
 p > span {
   font-weight: bold;
@@ -72,67 +137,162 @@ p > span {
 .download {
   padding: 0 0 0 2rem;
 }
+.redes {
+  margin-top: 10rem;
+}
 .flex__redes {
   display: flex;
+  flex-direction: column;
+}
+.flex__redes a {
+  padding-bottom: 2rem;
 }
 a {
   cursor: pointer;
+  transition: all 0.3s ease-out;
 }
-/*proyectos*/
-.section__proyectos {
+/*Boton*/
+.flip {
+  width: 160px;
+  height: 48px;
+  perspective: 500px;
+}
+.flip a {
+  font-weight: 400;
+  text-transform: uppercase;
   margin: 0;
-}
-.Grid__linea {
-  display: grid;
-  margin: 0 auto;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: minmax(10rem, auto);
-}
-
-.Caja {
-  width: 45vw;
-  height: 50vh;
-  margin: 0;
-}
-.Caja__vacia {
-  height: 3rem;
-}
-.Caja__Proyecto {
-  background-image: url(../img/proyectos/coffeto.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding: 0;
   width: 100%;
   height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-25px);
+  -moz-transform: translateZ(-25px);
+  -o-transform: translateZ(-25px);
+  -ms-transform: translateZ(-25px);
+  transform: translateZ(-25px);
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  -o-transition: -o-transform 0.3s;
+  -ms-transition: -ms-transform 0.3s;
+  transition: transform 0.3s;
+  cursor: pointer;
+}
+.flip a .front,
+.flip a .back {
   margin: 0;
-}
-.space {
-  margin-top: 20rem;
-}
-.space-center {
-  margin-left: 40vw;
-}
-.caja__linea--tiempo {
+  width: 160px;
+  height: 48px;
+  line-height: 48px;
+  position: absolute;
   text-align: center;
-  justify-content: center;
-  height: 50vh;
-  margin: 0;
+  letter-spacing: 0.4em;
+}
+.flip a .front {
+  background-color: #fe5f1e;
+  color: #fff;
+  -webkit-transform: rotateY(0) translateZ(24px);
+  -moz-transform: rotateY(0) translateZ(24px);
+  -o-transform: rotateY(0) translateZ(24px);
+  -ms-transform: rotateY(0) translateZ(24px);
+  transform: rotateY(0) translateZ(24px);
+}
+.flip a .back {
+  background-color: #1d1d1d;
+  color: rgba(34, 34, 34, 0);
+  -webkit-transform: rotateX(90deg) translateZ(24px);
+  -moz-transform: rotateX(90deg) translateZ(24px);
+  -o-transform: rotateX(90deg) translateZ(24px);
+  -ms-transform: rotateX(90deg) translateZ(24px);
+  transform: rotateX(90deg) translateZ(24px);
+  overflow: hidden;
+}
+.flip a .back:after {
+  content: "";
+  position: absolute;
+  top: -32%;
+  left: -10%;
+  width: 120%;
+  height: 50%;
+  background: #fe5f1e;
+  -webkit-transform: rotate(8deg);
+  -moz-transform: rotate(8deg);
+  -o-transform: rotate(8deg);
+  -ms-transform: rotate(8deg);
+  transform: rotate(8deg);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  -webkit-transition-delay: 0.15s;
+  -moz-transition-delay: 0.15s;
+  -o-transition-delay: 0.15s;
+  -ms-transition-delay: 0.15s;
+  transition-delay: 0.15s;
+}
+.flip a:hover {
+  -webkit-transform: translateZ(-24px) rotateX(-90deg);
+  -moz-transform: translateZ(-24px) rotateX(-90deg);
+  -o-transform: translateZ(-24px) rotateX(-90deg);
+  -ms-transform: translateZ(-24px) rotateX(-90deg);
+  transform: translateZ(-24px) rotateX(-90deg);
+}
+.flip a:hover .front {
+  background: #000;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+.flip a:hover .back {
+  color: #222;
+  -webkit-transition: color 0.4s linear;
+  -moz-transition: color 0.4s linear;
+  -o-transition: color 0.4s linear;
+  -ms-transition: color 0.4s linear;
+  transition: color 0.4s linear;
+  background: #1d1d1d;
+}
+.flip a:hover .back:after {
+  -webkit-transform: rotate(6deg) translate(100px, -18px);
+  -moz-transform: rotate(6deg) translate(100px, -18px);
+  -o-transform: rotate(6deg) translate(100px, -18px);
+  -ms-transform: rotate(6deg) translate(100px, -18px);
+  transform: rotate(6deg) translate(100px, -18px);
 }
 
-.linea {
-  background-color: black;
-  width: 10px;
-  height: 80%;
-  margin: 0 0 0 50%;
+/*proyectos*/
+.Grid__container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, minmax(15rem, 20rem));
+  color: #fff;
 }
-
+.Proyecto {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.p1 {
+  background-image: url(../img/proyectos/coffeto.png);
+}
+.p2 {
+  background-image: url(../img/proyectos/portafolio1.png);
+}
 /*footer*/
 .footer {
   width: 100vw;
-  height: 20vh;
+  height: 10vh;
 }
 .footer__color {
   background-color: #312f2f;
+  height: 100%;
 }
 .flex__footer--column {
   display: flex;
@@ -142,5 +302,49 @@ a {
 .flex__footer {
   display: flex;
   justify-content: space-between !important;
-  padding-top: 4rem;
+  padding: 2rem 0 2rem 0;
+}
+.flex__redes--footer {
+  display: flex;
+}
+/*Animaciones*/
+h1 > span,
+h2 > span,
+h3 > span {
+  margin: 0;
+  transition: all 0.3s ease-out;
+}
+
+h1 > span:hover,
+h2 > span:hover,
+h3 > span:hover {
+  color: #fe5f1e;
+}
+.btn a:hover {
+  color: #fff;
+}
+.Sombrahover {
+  background-color: rgba(37, 37, 37, 0.795);
+  height: 100%;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.Circulo {
+  opacity: 0;
+  padding: 5rem 0 0 12rem;
+  transition: all 0.3s ease-in-out;
+}
+.Circulohover {
+  position: absolute;
+  width: 8.9rem;
+  height: 8rem;
+  background-image: url(../img/circulo.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.Circulo:hover {
+  opacity: 1;
+}
+.Sombrahover:hover {
+  opacity: 1;
 }
